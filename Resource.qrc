@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>images/sillycat.jpg</file>
+        <file>stylesheet.qss</file>
+        <file>images/unchecked.jpg</file>
+    </qresource>
+</RCC>

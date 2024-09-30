@@ -1,0 +1,39 @@
+MainWindow {
+	background-color: #9FE2BF;
+}
+
+
+#listWidget {
+	background-color: #b8f2d4;
+	color: black;
+	border-radius:5px;
+	padding:5px;
+}
+
+
+QListWidget::indicator:unchecked {
+	
+}
+
+
+QListWidget::indicator:checked {
+	image: url(:/resources/images/sillycat.jpg);
+}
+
+QListWidget::item:selected {
+	background-color: #9de0be;
+	color: black;
+}
+
+QListWidget::item:editable {
+	background-color: white;
+}
+
+#toDoInput {
+    background-color: #b8f2d4;
+    color: black;
+    border: 20px white;
+    min-height: 25px;
+    border-radius: 8px;
+    padding-left:5px;
+}
