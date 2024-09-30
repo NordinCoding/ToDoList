@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="toDoInput">
+   <widget class="QLineEdit" name="toDoInput_1">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -27,7 +27,7 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="addTaskbtn">
+   <widget class="QPushButton" name="addTaskbtn_1">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -83,7 +83,7 @@
      <x>0</x>
      <y>0</y>
      <width>453</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

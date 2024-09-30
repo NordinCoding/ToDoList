@@ -64,7 +64,7 @@ QString task;
 
 void MainWindow::on_addTaskbtn_1_clicked()
 {
-    task = ui->toDoInput->text();
+    task = ui->toDoInput_1->text();
     int len = task.length();
     if (len != 0)
     {
@@ -72,8 +72,8 @@ void MainWindow::on_addTaskbtn_1_clicked()
         item->setCheckState(Qt::Unchecked);
         ui->listWidget->addItem(item);
         item->setFlags(item->flags() | Qt::ItemIsEditable | Qt::ItemIsUserCheckable);
-        ui->toDoInput->clear();
-        ui->toDoInput->setFocus();
+        ui->toDoInput_1->clear();
+        ui->toDoInput_1->setFocus();
     }
 }
 
@@ -97,7 +97,7 @@ void MainWindow::on_removeTaskbtn_1_clicked()
 }
 
 
-void MainWindow::on_toDoInput_returnPressed()
+void MainWindow::on_toDoInput_1_returnPressed()
 {
 
 }

@@ -26,8 +26,8 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QLineEdit *toDoInput;
-    QPushButton *addTaskbtn;
+    QLineEdit *toDoInput_1;
+    QPushButton *addTaskbtn_1;
     QPushButton *removeTaskbtn_1;
     QListWidget *listWidget;
     QLabel *label;
@@ -41,13 +41,13 @@ public:
         MainWindow->resize(453, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        toDoInput = new QLineEdit(centralwidget);
-        toDoInput->setObjectName("toDoInput");
-        toDoInput->setGeometry(QRect(20, 40, 321, 25));
-        toDoInput->setAutoFillBackground(false);
-        addTaskbtn = new QPushButton(centralwidget);
-        addTaskbtn->setObjectName("addTaskbtn");
-        addTaskbtn->setGeometry(QRect(350, 40, 80, 24));
+        toDoInput_1 = new QLineEdit(centralwidget);
+        toDoInput_1->setObjectName("toDoInput_1");
+        toDoInput_1->setGeometry(QRect(20, 40, 321, 25));
+        toDoInput_1->setAutoFillBackground(false);
+        addTaskbtn_1 = new QPushButton(centralwidget);
+        addTaskbtn_1->setObjectName("addTaskbtn_1");
+        addTaskbtn_1->setGeometry(QRect(350, 40, 80, 24));
         removeTaskbtn_1 = new QPushButton(centralwidget);
         removeTaskbtn_1->setObjectName("removeTaskbtn_1");
         removeTaskbtn_1->setGeometry(QRect(300, 510, 131, 24));
@@ -60,7 +60,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 453, 21));
+        menubar->setGeometry(QRect(0, 0, 453, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -74,7 +74,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        addTaskbtn->setText(QCoreApplication::translate("MainWindow", "Add Task", nullptr));
+        addTaskbtn_1->setText(QCoreApplication::translate("MainWindow", "Add Task", nullptr));
         removeTaskbtn_1->setText(QCoreApplication::translate("MainWindow", "Remove Checked", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Dev Build", nullptr));
     } // retranslateUi

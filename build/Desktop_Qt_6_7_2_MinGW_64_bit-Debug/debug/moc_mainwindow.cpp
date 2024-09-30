@@ -39,7 +39,7 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "on_addTaskbtn_1_clicked",
     "",
     "on_removeTaskbtn_1_clicked",
-    "on_toDoInput_returnPressed"
+    "on_toDoInput_1_returnPressed"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -85,7 +85,7 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_removeTaskbtn_1_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_toDoInput_returnPressed'
+        // method 'on_toDoInput_1_returnPressed'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -99,7 +99,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->on_addTaskbtn_1_clicked(); break;
         case 1: _t->on_removeTaskbtn_1_clicked(); break;
-        case 2: _t->on_toDoInput_returnPressed(); break;
+        case 2: _t->on_toDoInput_1_returnPressed(); break;
         default: ;
         }
     }

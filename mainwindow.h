@@ -24,11 +24,11 @@ private slots:
 
     void on_removeTaskbtn_1_clicked();
 
-    void on_toDoInput_returnPressed();
+    void on_toDoInput_1_returnPressed();
 
 private:
     Ui::MainWindow *ui;
 
-    QString path = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "\\toDoFile.txt";
+    QString path = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "\\toDoFileDev.txt";
 };
 #endif // MAINWINDOW_H

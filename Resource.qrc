@@ -3,5 +3,6 @@
         <file>images/sillycat.jpg</file>
         <file>stylesheet.qss</file>
         <file>images/unchecked.jpg</file>
+        <file>images/check.png</file>
     </qresource>
 </RCC>

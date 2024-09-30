@@ -1,5 +1,5 @@
 MainWindow {
-	background-color: #9FE2BF;
+	background-color: #ebdfc9;
 }
 
 
@@ -15,9 +15,8 @@ QListWidget::indicator:unchecked {
 	
 }
 
-
 QListWidget::indicator:checked {
-	image: url(:/resources/images/sillycat.jpg);
+	image: url(:/resources/images/check.png);
 }
 
 QListWidget::item:selected {
@@ -28,6 +27,8 @@ QListWidget::item:selected {
 QListWidget::item:editable {
 	background-color: white;
 }
+
+QListWidget::item:
 
 #toDoInput {
     background-color: #b8f2d4;
