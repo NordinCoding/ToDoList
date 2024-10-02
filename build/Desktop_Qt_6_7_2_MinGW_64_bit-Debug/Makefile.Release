@@ -106,8 +106,9 @@ release/qrc_Resource.cpp: ../../Resource.qrc \
 		C:/Qt/6.7.2/mingw_64/bin/rcc.exe \
 		../../stylesheet.qss \
 		../../images/check.png \
-		../../images/unchecked.jpg \
-		../../images/sillycat.jpg
+		../../images/sillycat.jpg \
+		../../images/unchecked.png \
+		../../images/checked.png
 	C:\Qt\6.7.2\mingw_64\bin\rcc.exe -name Resource --no-zstd ..\..\Resource.qrc -o release\qrc_Resource.cpp
 
 compiler_moc_predefs_make_all: release/moc_predefs.h

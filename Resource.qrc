@@ -2,7 +2,8 @@
     <qresource prefix="/resources">
         <file>images/sillycat.jpg</file>
         <file>stylesheet.qss</file>
-        <file>images/unchecked.jpg</file>
         <file>images/check.png</file>
+        <file>images/checked.png</file>
+        <file>images/unchecked.png</file>
     </qresource>
 </RCC>

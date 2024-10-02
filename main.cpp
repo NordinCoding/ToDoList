@@ -5,6 +5,7 @@
 #include <QListWidget>
 #include <QFile>
 #include <QString>
+#include <QSettings>
 
 int main(int argc, char *argv[])
 {

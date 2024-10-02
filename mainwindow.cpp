@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent):
     QTextStream in(&file);
 
     while(!in.atEnd()) {
-        QListWidgetItem *item = new QListWidgetItem(in.readLine(), ui->listWidget);
+        QListWidgetItem *item = new QListWidgetItem(in.readLine(), ui->listWidget_1);
         if(item->checkState())
         {
             item->setCheckState(Qt::Checked);
@@ -33,7 +33,7 @@ MainWindow::MainWindow(QWidget *parent):
 
         item->setForeground(QBrush(Qt::black));
 
-        ui->listWidget->addItem(item);
+        ui->listWidget_1->addItem(item);
         item->setFlags(item->flags() | Qt::ItemIsEditable | Qt::ItemIsUserCheckable);
 
     }
@@ -51,8 +51,8 @@ MainWindow::~MainWindow()
 
     QTextStream out(&file);
 
-    for (int i = 0; i < ui->listWidget->count(); ++i) {
-        out<<ui->listWidget->item(i)->text()<<"\n";
+    for (int i = 0; i < ui->listWidget_1->count(); ++i) {
+        out<<ui->listWidget_1->item(i)->text()<<"\n";
     }
 
     file.close();
@@ -70,7 +70,7 @@ void MainWindow::on_addTaskbtn_1_clicked()
     {
         QListWidgetItem *item = new QListWidgetItem(task);
         item->setCheckState(Qt::Unchecked);
-        ui->listWidget->addItem(item);
+        ui->listWidget_1->addItem(item);
         item->setFlags(item->flags() | Qt::ItemIsEditable | Qt::ItemIsUserCheckable);
         ui->toDoInput_1->clear();
         ui->toDoInput_1->setFocus();
@@ -82,8 +82,8 @@ void MainWindow::on_removeTaskbtn_1_clicked()
 {
     QList<int> checked;
 
-    for (int i = 0; i < ui->listWidget->count(); ++i) {
-        QListWidgetItem *item = ui->listWidget->item(i);
+    for (int i = 0; i < ui->listWidget_1->count(); ++i) {
+        QListWidgetItem *item = ui->listWidget_1->item(i);
         if(item->checkState())
             {
                 checked.append(i);
@@ -91,7 +91,7 @@ void MainWindow::on_removeTaskbtn_1_clicked()
     }
 
     for (int i = checked.size() - 1; i >= 0; --i) {
-        QListWidgetItem *item = ui->listWidget->item(checked[i]);
+        QListWidgetItem *item = ui->listWidget_1->item(checked[i]);
         delete item;
     }
 }
@@ -99,6 +99,16 @@ void MainWindow::on_removeTaskbtn_1_clicked()
 
 void MainWindow::on_toDoInput_1_returnPressed()
 {
-
+    task = ui->toDoInput_1->text();
+    int len = task.length();
+    if (len != 0)
+    {
+        QListWidgetItem *item = new QListWidgetItem(task);
+        item->setCheckState(Qt::Unchecked);
+        ui->listWidget_1->addItem(item);
+        item->setFlags(item->flags() | Qt::ItemIsEditable | Qt::ItemIsUserCheckable);
+        ui->toDoInput_1->clear();
+        ui->toDoInput_1->setFocus();
+    }
 }
 
