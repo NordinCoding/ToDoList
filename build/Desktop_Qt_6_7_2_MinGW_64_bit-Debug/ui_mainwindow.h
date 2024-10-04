@@ -58,7 +58,7 @@ public:
         removeTaskbtn_1->setGeometry(QRect(290, 510, 131, 31));
         listWidget_1 = new QListWidget(centralwidget);
         listWidget_1->setObjectName("listWidget_1");
-        listWidget_1->setGeometry(QRect(30, 110, 391, 391));
+        listWidget_1->setGeometry(QRect(40, 100, 371, 401));
         listWidget_1->viewport()->setProperty("cursor", QVariant(QCursor(Qt::CursorShape::PointingHandCursor)));
         listWidget_1->setFrameShape(QFrame::Shape::NoFrame);
         listWidget_1->setFrameShadow(QFrame::Shadow::Plain);
@@ -66,10 +66,10 @@ public:
         listWidget_1->setMidLineWidth(5);
         listWidget_1->setEditTriggers(QAbstractItemView::EditTrigger::DoubleClicked|QAbstractItemView::EditTrigger::EditKeyPressed);
         listWidget_1->setMovement(QListView::Movement::Static);
-        listWidget_1->setProperty("isWrapping", QVariant(true));
+        listWidget_1->setProperty("isWrapping", QVariant(false));
         listWidget_1->setResizeMode(QListView::ResizeMode::Fixed);
         listWidget_1->setLayoutMode(QListView::LayoutMode::SinglePass);
-        listWidget_1->setWordWrap(true);
+        listWidget_1->setWordWrap(false);
         label = new QLabel(centralwidget);
         label->setObjectName("label");
         label->setGeometry(QRect(20, 10, 71, 16));

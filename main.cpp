@@ -11,8 +11,12 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    QApplication::setStyle("Fusion");
+    // not sure if i should use this
+    // QApplication::setStyle("Fusion");
+    MainWindow w;
+    w.setWindowTitle("Task List");
 
+    // read stylesheet
     QFile file(":/resources/stylesheet.qss");
     if (file.open(QFile::ReadOnly)) {
         QString styleSheet = file.readAll();
@@ -22,7 +26,7 @@ int main(int argc, char *argv[])
         qDebug() << "Failed to load stylesheet:" << file.errorString();
     }
 
-    MainWindow w;
+
     w.show();
     return a.exec();
 }

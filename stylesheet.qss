@@ -26,15 +26,6 @@ MainWindow {
 	color: black;
 }
 
-
-#listWidget_1::item:editable {
-	background-color: white;
-}
-
-#listWidget_1 QAbstractItemView{
-	background-color:white;
-}
-
 #listWidget_1::item {
 	height: 30px;
 	border-bottom: 1px solid #E4C59E;

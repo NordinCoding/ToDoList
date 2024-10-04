@@ -10,13 +10,16 @@ MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);  
+    ui->setupUi(this);
 
     QFile file(path);
 
     if(!file.open(QIODevice::ReadOnly)) {
         QMessageBox::information(0, "error", file.errorString());
     }
+
+    ui->listWidget_1->setWordWrap(true);
+    ui->listWidget_1->setStyleSheet("QListView QLineEdit{background:#FFF2D7; color:black;}");
 
     QTextStream in(&file);
 
@@ -33,8 +36,8 @@ MainWindow::MainWindow(QWidget *parent):
 
         item->setForeground(QBrush(Qt::black));
 
-        ui->listWidget_1->addItem(item);
         item->setFlags(item->flags() | Qt::ItemIsEditable | Qt::ItemIsUserCheckable);
+        ui->listWidget_1->addItem(item);
 
     }
 
@@ -85,9 +88,9 @@ void MainWindow::on_removeTaskbtn_1_clicked()
     for (int i = 0; i < ui->listWidget_1->count(); ++i) {
         QListWidgetItem *item = ui->listWidget_1->item(i);
         if(item->checkState())
-            {
-                checked.append(i);
-            }
+        {
+            checked.append(i);
+        }
     }
 
     for (int i = checked.size() - 1; i >= 0; --i) {

@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QStandardPaths>
 #include <QPushButton>
+#include <QStyledItemDelegate>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
