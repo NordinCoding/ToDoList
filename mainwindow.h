@@ -20,7 +20,7 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-    QSoundEffect *efx;
+    QSoundEffect *addTaskefx;
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();

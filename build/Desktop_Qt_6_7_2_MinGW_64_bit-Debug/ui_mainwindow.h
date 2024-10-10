@@ -65,10 +65,12 @@ public:
         listWidget_1->setLineWidth(5);
         listWidget_1->setMidLineWidth(5);
         listWidget_1->setEditTriggers(QAbstractItemView::EditTrigger::DoubleClicked|QAbstractItemView::EditTrigger::EditKeyPressed);
-        listWidget_1->setMovement(QListView::Movement::Static);
+        listWidget_1->setDefaultDropAction(Qt::DropAction::MoveAction);
+        listWidget_1->setMovement(QListView::Movement::Free);
+        listWidget_1->setFlow(QListView::Flow::TopToBottom);
         listWidget_1->setProperty("isWrapping", QVariant(false));
-        listWidget_1->setResizeMode(QListView::ResizeMode::Fixed);
-        listWidget_1->setLayoutMode(QListView::LayoutMode::SinglePass);
+        listWidget_1->setResizeMode(QListView::ResizeMode::Adjust);
+        listWidget_1->setLayoutMode(QListView::LayoutMode::Batched);
         listWidget_1->setWordWrap(false);
         label = new QLabel(centralwidget);
         label->setObjectName("label");
@@ -81,7 +83,7 @@ public:
         listWidget_1->raise();
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 453, 25));
+        menubar->setGeometry(QRect(0, 0, 453, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");

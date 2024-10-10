@@ -20,11 +20,12 @@ MainWindow::MainWindow(QWidget *parent):
         QMessageBox::information(0, "error", file.errorString());
     }
 
-    ui->listWidget_1->setWordWrap(true);
+    //Change color of background when editing text
     ui->listWidget_1->setStyleSheet("QListView QLineEdit{background:#FFF2D7; color:black;}");
 
     QTextStream in(&file);
 
+    //Add every task from the txt file, also check if items are checked or not(not implemented yet)
     while(!in.atEnd()) {
         QListWidgetItem *item = new QListWidgetItem(in.readLine(), ui->listWidget_1);
         if(item->checkState())
@@ -42,15 +43,15 @@ MainWindow::MainWindow(QWidget *parent):
         ui->listWidget_1->addItem(item);
 
     }
+    ui->listWidget_1->setWordWrap(true);
 
     file.close();
 
-
-
     //create sound effect
-    efx = new QSoundEffect(this);
-    efx->setSource(QUrl("qrc:/resources/sounds/pop-6.wav"));
-    efx->setVolume(0.50);
+    addTaskefx = new QSoundEffect(this);
+    addTaskefx->setSource(QUrl("qrc:/resources/sounds/pop-6.wav"));
+    addTaskefx->setVolume(0.50);
+
 }
 
 MainWindow::~MainWindow()
@@ -87,7 +88,7 @@ void MainWindow::on_addTaskbtn_1_clicked()
         item->setFlags(item->flags() | Qt::ItemIsEditable | Qt::ItemIsUserCheckable);
         ui->toDoInput_1->clear();
         ui->toDoInput_1->setFocus();
-        efx->play();
+        addTaskefx->play();
     }
 }
 
@@ -123,7 +124,7 @@ void MainWindow::on_toDoInput_1_returnPressed()
         item->setFlags(item->flags() | Qt::ItemIsEditable | Qt::ItemIsUserCheckable);
         ui->toDoInput_1->clear();
         ui->toDoInput_1->setFocus();
-        efx->play();
+        addTaskefx->play();
     }
 }
 
