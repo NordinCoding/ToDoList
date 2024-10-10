@@ -80,7 +80,7 @@
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::NoFrame</enum>
+     <enum>QFrame::Shape::Panel</enum>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Shadow::Plain</enum>
@@ -126,8 +126,8 @@
    <zorder>addTaskbtn_1</zorder>
    <zorder>removeTaskbtn_1</zorder>
    <zorder>label</zorder>
-   <zorder>listWidget_1</zorder>
    <zorder>toDoInput_1</zorder>
+   <zorder>listWidget_1</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

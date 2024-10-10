@@ -4,7 +4,9 @@
 #include <QStandardPaths>
 #include <QMessageBox>
 #include <QtDebug>
-
+#include <QtMultimedia/QMediaPlayer>
+#include <QSoundEffect>
+#include <QAudioSource>
 
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent),
@@ -12,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent):
 {
     ui->setupUi(this);
 
-    QFile file(path);
+    QFile file(pathTaskFile);
 
     if(!file.open(QIODevice::ReadOnly)) {
         QMessageBox::information(0, "error", file.errorString());
@@ -42,11 +44,18 @@ MainWindow::MainWindow(QWidget *parent):
     }
 
     file.close();
+
+
+
+    //create sound effect
+    efx = new QSoundEffect(this);
+    efx->setSource(QUrl("qrc:/resources/sounds/pop-6.wav"));
+    efx->setVolume(0.50);
 }
 
 MainWindow::~MainWindow()
 {
-    QFile file(path);
+    QFile file(pathTaskFile);
 
     if(!file.open(QIODevice::ReadWrite | QIODevice::Truncate)) {
         QMessageBox::information(0, "error", file.errorString());
@@ -64,6 +73,7 @@ MainWindow::~MainWindow()
 }
 
 QString task;
+bool test;
 
 void MainWindow::on_addTaskbtn_1_clicked()
 {
@@ -77,6 +87,7 @@ void MainWindow::on_addTaskbtn_1_clicked()
         item->setFlags(item->flags() | Qt::ItemIsEditable | Qt::ItemIsUserCheckable);
         ui->toDoInput_1->clear();
         ui->toDoInput_1->setFocus();
+        efx->play();
     }
 }
 
@@ -112,6 +123,7 @@ void MainWindow::on_toDoInput_1_returnPressed()
         item->setFlags(item->flags() | Qt::ItemIsEditable | Qt::ItemIsUserCheckable);
         ui->toDoInput_1->clear();
         ui->toDoInput_1->setFocus();
+        efx->play();
     }
 }
 

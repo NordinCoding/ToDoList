@@ -60,7 +60,7 @@ public:
         listWidget_1->setObjectName("listWidget_1");
         listWidget_1->setGeometry(QRect(40, 100, 371, 401));
         listWidget_1->viewport()->setProperty("cursor", QVariant(QCursor(Qt::CursorShape::PointingHandCursor)));
-        listWidget_1->setFrameShape(QFrame::Shape::NoFrame);
+        listWidget_1->setFrameShape(QFrame::Shape::Panel);
         listWidget_1->setFrameShadow(QFrame::Shadow::Plain);
         listWidget_1->setLineWidth(5);
         listWidget_1->setMidLineWidth(5);
@@ -77,8 +77,8 @@ public:
         addTaskbtn_1->raise();
         removeTaskbtn_1->raise();
         label->raise();
-        listWidget_1->raise();
         toDoInput_1->raise();
+        listWidget_1->raise();
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 453, 25));

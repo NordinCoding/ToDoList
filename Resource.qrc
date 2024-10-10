@@ -5,5 +5,7 @@
         <file>images/check.png</file>
         <file>images/checked.png</file>
         <file>images/unchecked.png</file>
+        <file>sounds/pop-6.mp3</file>
+        <file>sounds/pop-6.wav</file>
     </qresource>
 </RCC>
